@@ -1,13 +1,58 @@
+:root  {
+    --background1: hsl(222, 26%, 31%);
+    --switcher-and-keypad-background1: hsl(223, 31%, 20%);
+    --display-background1: hsl(224, 36%, 15%);
+    --key-background1: hsl(30, 25%, 89%);
+    --key--border1: hsl(225, 21%, 49%);
+    --text-color1: hsl(221, 14%, 31%);
+    --reset-and-dell-background1: hsl(225, 21%, 49%);
+    --reset-and-dell-border1: hsl(224, 28%, 35%);
+    --equal-and-radio-background1: hsl(6, 63%, 50%);
+    --equal-border1: hsl(6, 70%, 34%);
+    --buttons-color1: rgb(255, 255, 255);
+    --equal-button-color1: rgb(255, 255, 255);
+    --header-text-color1: rgb(255, 255, 255);
+
+
+
+    --background2: hsl(0, 0%, 90%);
+    --switcher-and-keypad-background2: hsl(0, 5%, 81%);
+    --display-background2: hsl(0, 0%, 93%);
+    --key-background2: hsl(45, 7%, 89%);
+    --key--border2: hsl(35, 11%, 61%);
+    --text-color2: hsl(60, 10%, 19%);
+    --reset-and-dell-background2: hsl(185, 42%, 37%); 
+    --reset-and-dell-border2: hsl(185, 58%, 25%);
+    --equal-and-radio-background2: hsl(25, 98%, 40%);
+    --equal-border2: hsl(25, 99%, 27%);
+    --buttons-color2: rgb(255, 255, 255);
+    --equal-button-color2: rgb(255, 255, 255);
+    --header-text-color2: hsl(60, 10%, 19%);
+
+    --background3: hsl(268, 75%, 9%);
+    --switcher-and-keypad-background3: hsl(268, 71%, 12%);
+    --display-background3: hsl(268, 71%, 12%);
+    --key-background3: hsl(268, 47%, 21%);
+    --key--border3: hsl(290, 70%, 36%);
+    --text-color3: hsl(52, 100%, 62%);
+    --reset-and-dell-background3: hsl(281, 89%, 26%); 
+    --reset-and-dell-border3: hsl(285, 91%, 52%);
+    --equal-and-radio-background3: hsl(176, 100%, 44%);
+    --equal-border3: hsl(177, 92%, 70%);
+    --buttons-color3: rgb(255, 255, 255);
+    --equal-button-color3: hsl(198, 20%, 13%);
+    --header-text-color3: hsl(52, 100%, 62%);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 body {
     font-family: 'League Spartan', sans-serif;
-    background-color: hsl(222, 26%, 31%);
+    background-color: var(--background1);
 }
 .container {
-    background-color: hsl(222, 26%, 31%);
     max-width: 460px;
     height: 100vh;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -30,7 +75,7 @@ body {
 header {
     padding: 30px;
     display: flex;
-    color: white;
+    color: var(--header-text-color1);
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
@@ -59,20 +104,20 @@ header {
 .theme-option {
     display: flex;
     gap: .7rem;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--switcher-and-keypad-background1);
     padding: 5px 6px;
     border-radius: 14px;
 }
 .theme-option input {
     appearance: none;
-    background-color: hsla(6, 63%, 50%, 0);
+    background-color: hsla(0, 0%, 0%, 0);
     border-radius: 50%;
     width: 15px;
     height: 15px;
     transition: .4s;
 }
 .theme-option input:checked {
-    background-color: red;
+    background-color: var(--equal-and-radio-background1);
     transform: rotateY(180deg);
     transition: .4s;
 }
@@ -83,7 +128,7 @@ header {
     border-radius: 10px;
     display: flex;
     margin: auto;
-    background-color: hsl(224, 36%, 15%);
+    background-color: var(--display-background1);
     border: none;
     outline: none;
     padding: 10px 6%;
@@ -97,7 +142,7 @@ header {
 }
 .keypad {
     border-radius: 8px;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--switcher-and-keypad-background1);
     width: 80%;
     margin: auto;
     padding: 4%;
@@ -112,15 +157,15 @@ header {
 .key {
     border-radius: 6px;
     border: none;
-    border-bottom: 4px solid hsl(225, 21%, 49%);
+    border-bottom: 4px solid var(--key--border1);
     height: 66px;
     margin: 8px;
-    background-color: hsl(30, 25%, 89%);
+    background-color: var(--key-background1);
     font-size: 28px;
     font-weight: 700;
     font-family: 'League Spartan', sans-serif;
     padding-top: 6px;
-    color: hsl(221, 14%, 31%);
+    color: var(--text-color1);
 }
 .pad-buttons {
     display: flex;
@@ -132,15 +177,15 @@ header {
 
 
 #equal-button {
-    border-bottom: 4px solid hsl(6, 70%, 34%);
-    background-color:  hsl(6, 63%, 50%);
-    color: white;
+    border-bottom: 4px solid var(--equal-border1);
+    background-color:  var(--equal-and-radio-background1);
+    color: var(--equal-button-color1);
     font-size: 20px;
 }
 #reset-button, #del-button {
-    border-bottom: 4px solid hsl(224, 28%, 35%);
-    background-color: hsl(225, 21%, 49%);
-    color: white;
+    border-bottom: 4px solid var(--reset-and-dell-border1);
+    background-color: var(--reset-and-dell-background1);
+    color: var(--buttons-color1);
     font-size: 20px;
 }
 
