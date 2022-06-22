@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="src/style/style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2 class="logo">calc</h2>
+
+      <div class="theme-container">
+        <label for="theme">THEME</label>
+        <div class="theme-switch">
+          <div class="theme-id">
+            <label for="">1</label>
+            <label for="">2</label>
+            <label for="">3</label>
+          </div>
+
+          <div class="theme-option">
+
+            <input checked="checked" type="radio" name="theme" id="theme1" value="1">
+
+            <input type="radio" name="theme" id="theme2" value="2">
+
+            <input type="radio" name="theme" id="theme3" value="3">
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <section class="screen"><input type="text" class="display" id="display" placeholder="0.0">
+    </section>
+    <section class="keypad">
+      <div class="keyboard">
+        <button value="7" class="key">7</button>
+        <button value="8" class="key">8</button>
+        <button value="9" class="key">9</button>
+        <button id="del-button" class="key">DEL</button>
+        <button value="4" class="key">4</button>
+        <button value="5" class="key">5</button>
+        <button value="6" class="key">6</button>
+        <button value="+" class="key">+</button>
+        <button value="1" class="key">1</button>
+        <button value="2" class="key">2</button>
+        <button value="3" class="key">3</button>
+        <button value="-" class="key">-</button>
+        <button value="." class="key">.</button>
+        <button value="0" class="key">0</button>
+        <button value="/" class="key">/</button>
+        <button value="*" class="key">x</button>
+      </div>
+      <div class="pad-buttons">
+        <button id="reset-button" class="key">RESET</button>
+        <button id="equal-button" class="key">=</button>
+      </div>
+    </section>
+  </div>
+
+
+
+
+  <script src="src/application/index.js"></script>
+</body>
+</html>
